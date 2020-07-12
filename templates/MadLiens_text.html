@@ -1,0 +1,25 @@
+<table>
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_EXEMPLE}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right"><a href="<{$xoops_url}>" title="<{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}>" /><{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}></td>
+	</tr>
+
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_SCRIPT}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right">
+      <textarea class='MadLienTextarea' name='link' cols='<{$textarea_width}>' rows='<{$textarea_height}>'><a href="<{$xoops_url}>" title="<{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}>" /><{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}></a></textarea>
+		</td>
+	</tr>
+
+	</tr>
+		<td align="right">
+		<input type="button" value="<{$smarty.const._MADLIENS_COPY}>" onclick="javascript:this.form.link.focus();this.form.link.select();copy_to_clip(this.form.link.value);" />
+		</td>
+	</tr>
+</table>

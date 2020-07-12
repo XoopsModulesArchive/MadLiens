@@ -1,0 +1,44 @@
+<{$xoTheme->addStylesheet('modules/MadLiens/css/style.css')}>
+<{$xoTheme->addScript('modules/MadLiens/scripts/copy_to_clip.js')}>
+
+<form>
+<div class="moduleHead">
+	<div class="moduleTitle"><{$module_title}></div>
+
+	<{if $lang_header}>
+		<span class="moduleDescription"><{$lang_header}></span>
+	<{/if}>
+</div>
+
+<div class="itemBody">
+	<p class="itemText">
+		<div id="tablist">
+		<ul>
+			<{foreach name=foo item=link from=$Madliens}>
+				<{assign var=class value=''}>
+     			<{if $link.id == $current}>
+	     			<{assign var=class value='class="current" '}>
+	     		<{/if}>
+				<li><a <{$class}> href="<{$xoops_url}>/modules/MadLiens/index.php?id=<{$link.id}>" /><{$link.name}></a></li>
+			<{/foreach}>
+		</ul>
+		</div>
+		<{assign var='tab' value=$current}>
+      <div id="tabcontentcontainer">
+			<{foreach name=foo item=lien from=$Madliens.$current.links}>
+				<{assign var='template' value=$lien.type}>
+				<{include file="db:MadLiens_$template.html"}>
+				<{if !$smarty.foreach.foo.last}>
+					<hr />
+				<{/if}>
+			<{/foreach}>
+		</div>
+	</p>
+</div>
+
+<{if $lang_footer}>
+	<div class="moduleHead">
+		<span class="moduleDescription"><{$lang_footer}></span>
+	</div>
+<{/if}>
+</form>

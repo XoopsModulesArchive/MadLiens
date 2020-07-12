@@ -1,0 +1,33 @@
+<table>
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_EXEMPLE}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right"><img src="<{$lien.img}>" title="<{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}>" /></td>
+	</tr>
+
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_IMG}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right"><{$lien.img}></td>
+	</tr>
+
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_SCRIPT}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right">
+      <textarea class='MadLienTextarea' name='link<{$tab}>_<{$smarty.foreach.foo.iteration}>' cols='<{$textarea_width}>' rows='<{$textarea_height}>'><a href="<{$xoops_url}>" title="<{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}>" /><img src="<{$lien.img}>" title="<{$xoops_sitename}><{if !empty($xoops_slogan)}> : <{$xoops_slogan}><{/if}>" /></a></textarea>
+		</td>
+	</tr>
+
+	</tr>
+		<td align="right">
+		<input type="button" value="<{$smarty.const._MADLIENS_COPY}>" onclick="javascript:this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.focus();this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.select();copy_to_clip(this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.value);" />
+		</td>
+	</tr>
+</table>

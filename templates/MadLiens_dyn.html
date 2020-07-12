@@ -1,0 +1,54 @@
+<{$xoTheme->addStylesheet('modules/MadLiens/css/style.css')}>
+<{$xoTheme->addScript('modules/MadLiens/scripts/copy_to_clip.js')}>
+<script type="text/javascript">
+var initialtab=[<{$current}>, 'sc<{$current}>']
+var previoustab=""
+var persisttype="sitewide"
+</script>
+<{$xoTheme->addScript('modules/MadLiens/scripts/TabContentScript.js')}>
+
+<form>
+<div class="moduleHead">
+	<div class="moduleTitle"><{$module_title}></div>
+
+	<{if $lang_header}>
+		<span class="moduleDescription"><{$lang_header}></span>
+	<{/if}>
+</div>
+
+<div class="itemBody">
+	<p class="itemText">
+		<div id="tablist">
+		<ul>
+			<{foreach name=foo item=link from=$Madliens}>
+				<{assign var=class value=''}>
+     			<{if $link.id == $current}>
+					<script type="text/javascript">
+					var initialtab=[<{$smarty.foreach.foo.iteration}>, 'sc<{$current}>']
+					</script>
+	     			<{assign var=class value='class="active" '}>
+	     		<{/if}>
+				<li><a <{$class}> onMouseover="return expandcontent('sc<{$link.id}>', this)" /><{$link.name}></a></li>
+			<{/foreach}>
+		</ul>
+		</div>
+      <div id="tabcontentcontainer">
+		<{foreach name=foo item=links from=$Madliens}>
+			<{assign var='tab' value=$links.id}>
+			<div id="sc<{$links.id}>" class="tabcontent">
+            <{foreach name=foo item=lien from=$links.links}>
+					<{assign var='template' value=$lien.type}>
+					<{include file="db:MadLiens_$template.html"}>
+				<{/foreach}>
+			</div>
+		<{/foreach}>
+
+	</p>
+</div>
+
+<{if $lang_footer}>
+	<div class="moduleHead">
+		<span class="moduleDescription"><{$lang_footer}></span>
+	</div>
+<{/if}>
+</form>

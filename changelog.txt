@@ -1,0 +1,17 @@
+/**
+*
+* MadLiens : changelog
+* 
+*/
+
+v2.0
+- entirely rewritten
+- support flash's file (swf)
+
+V1.0
+- Use template
+- 10 different logos
+- 10 different buttons
+- 10 different banners
+
+v1.0 - baseline : Link to us 1.00 (melkahdor)

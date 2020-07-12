@@ -1,0 +1,39 @@
+<table>
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_EXEMPLE}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/ swflash.cab#version=6,0,40,0" width="<{$lien.width}>" height="<{$lien.height}>">
+			<param name=movie value="<{$lien.img}>">
+			<param name=quality value=high>
+			<embed src="<{$lien.img}>" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash"></embed>
+		</object>
+		</td>
+	</tr>
+
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_SWF}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right"><{$lien.img}></td>
+	</tr>
+
+	<tr>
+		<td><b><{$smarty.const._MADLIENS_SCRIPT}></b></td>
+	</tr>
+
+	<tr>
+		<td class="right">
+      <textarea class='MadLienTextarea' name='link<{$tab}>_<{$smarty.foreach.foo.iteration}>' cols='<{$textarea_width}>' rows='<{$textarea_height}>'><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/ swflash.cab#version=6,0,40,0" width="<{$lien.width}>" height="<{$lien.height}>"><param name=movie value="<{$lien.img}>"><param name=quality value=high><embed src="<{$lien.img}>" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash"></embed></object></textarea>
+		</td>
+	</tr>
+
+	</tr>
+		<td align="right">
+		<input type="button" value="<{$smarty.const._MADLIENS_COPY}>" onclick="javascript:this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.focus();this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.select();copy_to_clip(this.form.link<{$tab}>_<{$smarty.foreach.foo.iteration}>.value);" />
+		</td>
+	</tr>
+</table>

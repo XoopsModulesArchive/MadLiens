@@ -1,0 +1,82 @@
+/*=============== styles pour les modules =================*/
+.moduleHead {
+	color:							#000;
+	margin-bottom:					20px
+}
+.moduleTitle {
+	font-size:						1.2em;
+	font-weight:					bold;
+	text-align:						center;
+}
+.moduleDescription {
+	margin:							10px 0;
+	padding:							5px;
+	font-weight:					bold;
+	text-align:						center;
+	border-top:						1px solid #000;
+	border-bottom:					1px solid #000;
+	display:							block;
+}
+
+#tablist{
+	padding: 					0;
+	margin: 						0;
+}
+
+#tablist ul {
+	padding: 					0;
+	margin: 						0;
+	list-style: 				none;
+}
+#tablist li {
+	padding: 					0;
+	margin: 						0;
+	list-style: 				none;
+	display: 					inline;
+	line-height: 				24px;
+}
+
+#tablist li a{
+	padding: 					5px ;
+	margin: 						0;
+	color: 						#ffffff;
+	background-color: 		#639ACE;
+	border:						0;
+	cursor:						hand;
+}
+
+#tablist li a:link, #tablist li a:visited, #tablist li a:active {
+	color: 						#ffffff;
+	background-color: 		#639ACE;
+}
+
+#tablist li a:hover {
+	color: 						#639ACE;
+	background-color: 		#dddddd;
+}
+
+#tablist li a.current {
+	color: 						#639ACE;
+	background-color: 		#dddddd;
+}
+
+#tabcontentcontainer{
+/* Insert Optional Height definition here to give all the content a unified height */
+	padding: 					5px;
+	margin: 						0;
+	border: 						0;
+	background-color: 		#dddddd;
+}
+
+#tabcontentcontainer img{
+	height:						auto;
+	background-color:			transparent;
+}
+
+.tabcontent{
+	display:						none;
+}
+
+.MadLienTextarea {
+	width: 99% !important;
+}
